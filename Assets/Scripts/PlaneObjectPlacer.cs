@@ -35,7 +35,7 @@ public class PlaneObjectPlacer : MonoBehaviour
         settedObject.transform.position = pose.position;
 
         var cameraForward = arCamera.transform.forward;
-        settedObject.transform.rotation = Quaternion.LookRotation(new Vector3(cameraForward.x, 0, -cameraForward.z)).normalized;
+        settedObject.transform.rotation = Quaternion.LookRotation(new Vector3(cameraForward.x, 0, cameraForward.z)).normalized;
     }
 
     private void OnDestroy()
